@@ -90,9 +90,6 @@
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
 
-    <!-- Define app splash screen for each platform. -->
-    <splash src="splash.png" />
-    
     <!-- Whitelisting access -->
     <access origin="*" />
     <allow-navigation href="http://*/*" />
