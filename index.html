@@ -7,23 +7,19 @@
         <meta name="mobile-web-app-capable" content="yes" />
 
         <!-- JS dependencies (order matters!) -->
-        
         <script src="js/angular/angular.js"></script>
-        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script> 
         <script src="js/angular/sanitize.js"></script>
         <script src="js/onsenui.js"></script>
         <!--<script src="js/autocomplete.js"></script>-->
         <script src="phonegap.js"></script>
         <script src="js/app.js"></script> 
-        <script src="http://radioinfant.antfarm.co.za/pretoriafm/scripts/jwplayer7/jwplayer.js"></script>
         
+
         <!-- CSS dependencies -->
         <link rel="stylesheet" href="css/onsenui.css" />
         <link rel="stylesheet" href="css/onsen-css-components.css" />
         <!--<link rel="stylesheet" href="css/autocomplete.css">-->
         <link rel="stylesheet" href="css/app.css" />
-        <!-- antfarm css -->
-        <link href="http://radioinfant.antfarm.co.za/pretoriafm/css/fallback.css" rel="stylesheet" /> 
 
         <!-- CSP support mode (required for Windows Universal apps) -->
         <link rel="stylesheet" href="js/angular/angular-csp.css" />
@@ -59,6 +55,20 @@
                 </div>
             </ons-page>
         </ons-navigator>
+
+        <ons-template id="luister.html">
+            <ons-page>
+                <ons-toolbar>
+                    <div class="left">
+                        <ons-back-button>TERUG</ons-back-button>
+                    </div>
+                    <div class="center">LUISTER NOU</div>
+                </ons-toolbar>
+                <div style="text-align: center">
+                    <iframe ng-src="{{streamURL}}" frameborder="0" style="border:0" width="320" height="320" ></iframe>
+                </div>
+            </ons-page>
+        </ons-template>
     
         <ons-template id="mense.html">
             <ons-page>
@@ -306,7 +316,5 @@
                 </div>
             </ons-page>
         </ons-template>
-        <script src="http://radioinfant.antfarm.co.za/pretoriafm/scripts/jwplayer7/jwplayer.js"></script>
-        <script src="http://radioinfant.antfarm.co.za/pretoriafm/player.ashx"></script>
     </body>
 </html>
