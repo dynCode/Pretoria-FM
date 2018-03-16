@@ -34,6 +34,14 @@
                     LUISTER NOU
                 </ons-button>
                 <br />
+                <ons-button modifier="large" class="forntPageBut" onclick="cordova.InAppBrowser.open('http://capeant.antfarm.co.za:1935/pretoriafm/pretoriafm.stream/playlist.m3u8', '_blank', 'location=yes');">
+                    LUISTER NOU (inApp)
+                </ons-button>
+                <br />
+                <ons-button modifier="large" class="forntPageBut" ng-click="playMedia()">
+                    LUISTER NOU (Media API)
+                </ons-button>
+                <br />
                 <ons-button modifier="large" class="forntPageBut" ng-click="myNavigator.pushPage('kontak.html', { animation : 'slide' } )">
                     KONTAK ONS
                 </ons-button>

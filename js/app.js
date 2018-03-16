@@ -8,6 +8,8 @@
         $scope.streamURL = $sce.trustAsResourceUrl('http://myitmanager.co.za/pretoriafm/player.html');
         $scope.mapURL = $sce.trustAsResourceUrl('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.7539543474313!2d28.29189631560485!3d-25.745649051741147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebfdf1f40e32beb%3A0x2b680ca4d452012e!2sRadio+Pretoria!5e0!3m2!1sen!2sus!4v1456435667117');
         
+        $scope.errorCode = '';
+        
         $scope.playAudio = function() {
             var audioUrl = "http://capeant.antfarm.co.za:1935/pretoriafm/pretoriafm.stream/playlist.m3u8";
 
@@ -38,27 +40,32 @@
             // Resume current audio (iOS only)
             window.plugins.streamingMedia.resumeAudio();  
         };
+        
+        $scope.playMedia = function () {
+            playAudioM(";http://capeant.antfarm.co.za:1935/pretoriafm/pretoriafm.stream/playlist.m3u8");
+        };
+        
+        function playAudioM(url) {
+            // Play the audio file at url
+            var my_media = new Media(url,
+                // success callback
+                function () {
+                    alert("playAudio():Audio Success");
+                },
+                // error callback
+                function (err) {
+                    alert("playAudio():Audio Error: " + err);
+                }
+            );
+            // Play audio
+            my_media.play();
+        }
     });
 })();
 
 // normal JS //
 document.addEventListener('deviceready', function () {
     console.log(Media);
-    playAudio("http://capeant.antfarm.co.za:1935/pretoriafm/pretoriafm.stream/playlist.m3u8");
+    
 }, false);
 
-function playAudio(url) {
-    // Play the audio file at url
-    var my_media = new Media(url,
-        // success callback
-        function () {
-            console.log("playAudio():Audio Success");
-        },
-        // error callback
-        function (err) {
-            console.log("playAudio():Audio Error: " + err);
-        }
-    );
-    // Play audio
-    my_media.play();
-}
