@@ -73,12 +73,6 @@
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     
-    <plugin name="cordova-plugin-whitelist" />
-    <plugin name="nl.x-services.plugins.backgroundaudio" source="pgb" />
-    <feature name="BackgroundAudio">
-        <param name="ios-package" value="BackgroundAudio" />
-        <param name="onload" value="true" />
-    </feature>
     
 
     <!-- Define app icon for each platform. -->
