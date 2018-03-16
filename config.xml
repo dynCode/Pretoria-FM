@@ -74,7 +74,6 @@
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     
     <plugin name="cordova-plugin-whitelist" />
-    <plugin name="de.appplant.cordova.plugin.background-mode" source="pgb" />
     <plugin name="nl.x-services.plugins.backgroundaudio" source="pgb" />
     <feature name="BackgroundAudio">
         <param name="ios-package" value="BackgroundAudio" />
