@@ -2,8 +2,8 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.pretoriafm"
-        versionCode = "10" 
-        version   = "1.0">
+        versionCode = "15" 
+        version   = "1.5">
 
     <name>Pretoria FM</name>
 
@@ -16,7 +16,7 @@
     <author href="http://www.myitmanager.co.za" email="support@myitmanager.co.za">
         My IT Manager
     </author>
-
+    <preference name="phonegap-version" value="cli-7.0.1" />
     <platform name="ios" >
         <preference name="orientation" value="portrait" />
         <preference name="fullscreen" value="true" />  
@@ -65,19 +65,14 @@
         <icon src="res/icons/android/icon-72-hdpi.png" qualifier="hdpi" />
         <icon src="res/icons/android/icon-96-xhdpi.png" qualifier="xhdpi" />
     </platform>
-    <platform name="winphone" >
-        <preference name="orientation" value="portrait" />
-        <preference name="fullscreen" value="true" />  
-    </platform>
  
-    <feature name="http://api.phonegap.com/1.0/network" />
-    <feature name="http://api.phonegap.com/1.0/geolocation" />
+    <plugin name="cordova-plugin-device-orientation" />
+    <plugin name="cordova-plugin-geolocation" />
+    <plugin name="cordova-plugin-whitelist" />
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
-    <!--
-        <gap:plugin name="com.phonegap.plugins.barcodescanner" />
-    -->
+    
     <plugin name="cordova-plugin-whitelist" />
     <plugin name="org.apache.cordova.device" spec="0.2.12" source="pgb" />
     <plugin name="de.appplant.cordova.plugin.background-mode" spec="0.6.4" source="pgb" />
