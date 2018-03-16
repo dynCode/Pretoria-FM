@@ -40,32 +40,11 @@
             // Resume current audio (iOS only)
             window.plugins.streamingMedia.resumeAudio();  
         };
-        
-        $scope.playMedia = function () {
-            playAudioM(";http://capeant.antfarm.co.za:1935/pretoriafm/pretoriafm.stream/playlist.m3u8");
-        };
-        
-        function playAudioM(url) {
-            // Play the audio file at url
-            var my_media = new Media(url,
-                // success callback
-                function () {
-                    alert("playAudio():Audio Success");
-                },
-                // error callback
-                function (err) {
-                    alert("playAudio():Audio Error: " + err);
-                }
-            );
-            // Play audio
-            my_media.play();
-        }
     });
 })();
 
 // normal JS //
 document.addEventListener('deviceready', function () {
-    console.log(Media);
     
 }, false);
 

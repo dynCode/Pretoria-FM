@@ -69,7 +69,6 @@
     <plugin name="cordova-plugin-device-orientation" />
     <plugin name="cordova-plugin-geolocation" />
     <plugin name="cordova-plugin-whitelist" />
-    <plugin name="cordova-plugin-media" />
     <plugin name="cordova-plugin-inappbrowser" />
 
     <!-- Third party plugins -->
