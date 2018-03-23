@@ -11,34 +11,21 @@
         $scope.errorCode = '';
         
         $scope.playAudio = function() {
-            var audioUrl = "http://capeant.antfarm.co.za:1935/pretoriafm/pretoriafm.stream/playlist.m3u8";
+            var audioUrl = "http://capeant.antfarm.co.za:8000/ptafm";
 
-            // Play an audio file (not recommended, since the screen will be plain black)
-            window.plugins.streamingMedia.playAudio(audioUrl);
-
-            // Play an audio file with options (all options optional)
-            var options = {
-                bgColor: "#65c8d0",
-                bgImage: "http://www.pretoriafm.co.za/wp-content/uploads/2015/07/pretoria-fm-logo-retina.png",
-                bgImageScale: "fit", // other valid values: "stretch"
-                initFullscreen: false, // true(default)/false iOS only
-                successCallback: function() {
-                    console.log("Player closed without error.");
+            // Play the audio file at url
+            var my_media = new Media(audioUrl,
+                // success callback
+                function () {
+                    console.log("playAudio():Audio Success");
                 },
-                errorCallback: function(errMsg) {
-                    console.log("Error! " + errMsg);
+                // error callback
+                function (err) {
+                    console.log("playAudio():Audio Error: " + err);
                 }
-            };
-            window.plugins.streamingMedia.playAudio(audioUrl, options);
-
-            // Stop current audio
-            window.plugins.streamingMedia.stopAudio();
-
-            // Pause current audio (iOS only)
-            window.plugins.streamingMedia.pauseAudio();
-
-            // Resume current audio (iOS only)
-            window.plugins.streamingMedia.resumeAudio();  
+            );
+            // Play audio
+            my_media.play();
         };
     });
 })();

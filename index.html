@@ -33,12 +33,13 @@
                 <ons-button modifier="large" class="forntPageBut" ng-click="myNavigator.pushPage('luister.html', { animation : 'slide' } )">
                     LUISTER NOU (Page)
                 </ons-button>
+                <br />
                 <ons-button modifier="large" class="forntPageBut" ng-click="playAudio()">
-                    LUISTER NOU
+                    LUISTER NOU (Cordova Media)
                 </ons-button>
                 <br />
                 <ons-button modifier="large" class="forntPageBut" onclick="cordova.InAppBrowser.open('http://capeant.antfarm.co.za:8000/ptafm', '_blank', 'location=yes,allowInlineMediaPlayback=yes');">
-                    LUISTER NOU
+                    LUISTER NOU (In App Browser)
                 </ons-button>
                 <br />
                 
@@ -68,8 +69,10 @@
                     </div>
                     <div class="center">LUISTER NOU</div>
                 </ons-toolbar>
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="images/pretoria-fm-logo.png" />
+                </div>
                 <div style="text-align: center">
-                    
                     <audio autoplay preload="auto" controls src="http://capeant.antfarm.co.za:8000/ptafm" id="audio"></audio>
                 </div>
             </ons-page>

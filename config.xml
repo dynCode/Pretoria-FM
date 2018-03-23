@@ -56,6 +56,11 @@
         <!-- iPad Pro -->
         <icon src="res/icons/ios/icon-83.5@2x.png" width="167" height="167" />
     </platform>
+    <config-file platform="ios" target="*-Info.plist" parent="UIBackgroundModes">
+        <array>
+            <string>audio</string>
+        </array>
+    </config-file>
     <platform name="android" >
         <preference name="orientation" value="portrait" />
         <preference name="fullscreen" value="true" />  
@@ -76,7 +81,7 @@
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     
-    <plugin name="cordova-plugin-streaming-media" />
+    <plugin name="cordova-plugin-media" />
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
