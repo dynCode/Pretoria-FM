@@ -33,6 +33,18 @@
 
 // normal JS //
 document.addEventListener('deviceready', function () {
-    
+    cordova.plugins.backgroundMode.setEnabled(true);
+        cordova.plugins.backgroundMode.setDefaults({
+        title: "Pretoria FM",
+        text: "Luister Nou",
+        icon: 'icon',
+        color: "65c8d0",
+        resume: true,
+        hidden: false,
+        bigText: false
+    });
+    cordova.plugins.backgroundMode.on('activate', function() {
+        cordova.plugins.backgroundMode.disableWebViewOptimizations(); 
+    });
 }, false);
 
