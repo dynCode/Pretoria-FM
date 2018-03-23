@@ -30,7 +30,9 @@
                 <div style="text-align: center; margin: 20px 0;">
                     <img src="images/pretoria-fm-logo.png" />
                 </div>
-                
+                <ons-button modifier="large" class="forntPageBut" ng-click="myNavigator.pushPage('luister.html', { animation : 'slide' } )">
+                    LUISTER NOU (Page)
+                </ons-button>
                 <ons-button modifier="large" class="forntPageBut" ng-click="playAudio()">
                     LUISTER NOU
                 </ons-button>
@@ -67,8 +69,8 @@
                     <div class="center">LUISTER NOU</div>
                 </ons-toolbar>
                 <div style="text-align: center">
-                    <!--<iframe ng-src="{{streamURL}}" frameborder="0" style="border:0" width="320" height="320" ></iframe>-->
-                    <audio autoplay preload="auto" controls src="http://capeant.antfarm.co.za:1935/pretoriafm/pretoriafm.stream/playlist.m3u8" id="audio"></audio>
+                    
+                    <audio autoplay preload="auto" controls src="http://capeant.antfarm.co.za:8000/ptafm" id="audio"></audio>
                 </div>
             </ons-page>
         </ons-template>
