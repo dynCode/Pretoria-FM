@@ -77,11 +77,12 @@
     <plugin name="cordova-plugin-geolocation" />
     <plugin name="cordova-plugin-whitelist" />
     <plugin name="cordova-plugin-inappbrowser" />
+    <plugin name="cordova-plugin-media" />
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     
-    <plugin name="cordova-plugin-media" />
+    <plugin name="cordova-allow-background-audio" />
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
