@@ -17,15 +17,16 @@
             var my_media = new Media(audioUrl,
                 // success callback
                 function () {
-                    console.log("playAudio():Audio Success");
+                    alert("playAudio():Audio Success");
                 },
                 // error callback
                 function (err) {
-                    console.log("playAudio():Audio Error: " + err);
+                    alert("playAudio():Audio Error: " + err);
                 }
             );
             // Play audio
-            my_media.play();
+            my_media.play({ playAudioWhenScreenIsLocked : true });
+            my_media.setVolume('1.0');
         };
     });
 })();
